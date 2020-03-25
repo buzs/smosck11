@@ -1,11 +1,11 @@
 const express = require('express');
 
-const app = express();
+const routes = express.Router();
 
-app.get('/', (req, res) => {
+routes.get('/', (req, res) => {
     return res.json({
         event: 'Semana OminiStack 11'
     })
 })
 
-app.listen(3333);
+module.exports = routes
