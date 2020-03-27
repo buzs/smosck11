@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom'
 import { FiLogIn } from 'react-icons/fi'
 
@@ -21,7 +21,7 @@ export default function Logon() {
       const res = await api.post('sessions', { id })
 
       localStorage.setItem('ongId', id);
-      localStorage.setItem('ongName', response.data.name)
+      localStorage.setItem('ongName', res.data.name)
 
       history.push('/profile')
     } catch (err) {
