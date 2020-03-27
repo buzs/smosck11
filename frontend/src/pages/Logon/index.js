@@ -15,7 +15,7 @@ export default function Logon() {
   const history = useHistory()
 
   async function handleLogin(e) {
-    e.preventDefault()
+    e.preventDefault();
 
     try {
       const res = await api.post('sessions', { id })
@@ -34,10 +34,9 @@ export default function Logon() {
       <section className="form">
         <img src={logoImg} alt="Be The Hero" />
 
-        <form onChange={handleLogin}>
+        <form onSubmit={handleLogin} >
           <h1>Faça seu logon</h1>
           <input
-            type="text"
             placeholder="Sua ID"
             value={id}
             onChange={e => setId(e.target.value)}
