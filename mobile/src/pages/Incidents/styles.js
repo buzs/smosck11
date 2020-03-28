@@ -48,6 +48,12 @@ export default StyleSheet.create({
     marginBottom: 16,
   },
 
+  incidentProperty: {
+    fontSize: 14,
+    color: '#41414d',
+    fontWeight: 'bold'
+  },
+
   incidentValue: {
     marginTop: 8,
     fontSize: 15,
